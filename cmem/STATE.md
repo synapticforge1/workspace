@@ -4,7 +4,7 @@ Updated: 2026-11-19, at the end of the session
 
 ## Version
 - The repository `synapticforge1/workspace` (public) since 2026-11-19; nothing is released from it.
-- Working branch: main; the first commit of the moved memory is local, NOT pushed
+- Working branch: main; first published to GitHub on 2026-11-19
 
 ## Now
 - The owner's three standards are out to the projects: reviews (H37), memory (H38), platforms (H39, H40).
@@ -25,7 +25,6 @@ Updated: 2026-11-19, at the end of the session
 3. Refresh `open-work.md` against each project's new `STATE.md` as they appear.
 
 ## Waiting on owner
-- The word "push": the moved memory is committed locally and has not been pushed.
 - The Linux distro list for `linux-x64`; the two Mac test machines.
 
 ## Read next
