@@ -17,8 +17,12 @@ and the recommended floor is stated; the owner decides whether to unify
 - Since 2026-11-19 the workspace memory is its own git repository, `synapticforge1/workspace` (PUBLIC),
   beside the projects: `cmem/`, `tools/` and the pointer `CLAUDE.md`. The owner's "commit" and "push"
   apply to it like any project; `cmem/local/` is gitignored and never leaves this machine.
-- It is public: nothing goes into a tracked file that the privacy rule forbids, and nothing about
-  the private project (LeptonPad) beyond what the owner accepts as public.
+- It is public: nothing goes into a tracked file that the privacy rule forbids.
+- 🔒 The private project, LeptonPad (owner, 2026-11-19): its release process and version history
+  may be public. Its deploy host and "anything that would cause a security issue with the website
+  host or website in general" may not: no hosting or backend provider names, no production
+  settings, no site endpoints or cache names, no container image, no billing or pricing detail.
+  Write "the host" and "the live site" instead. This holds for letters and answers too.
 - Until 2026-11-19 the root `CLAUDE.md` carried a digest of these rules; it is now a pointer
   (memory-guide.md), and the digest is in [archive/CLAUDE-to-2026-11-19.md](archive/CLAUDE-to-2026-11-19.md).
 

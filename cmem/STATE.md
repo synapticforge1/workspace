@@ -10,6 +10,8 @@ Updated: 2026-11-19, at the end of the session
 - The owner's three standards are out to the projects: reviews (H37), memory (H38), platforms (H39, H40).
 - The workspace's own memory was migrated to the memory guide on 2026-11-19 (H41).
 - Correspondence is one file per open item in `letters/`; 26 items are open (H42: the move).
+- The private project's host and site details are stripped from every tracked note (owner's rule
+  for this public repository: `working-rules.md`, the role of a session).
 
 ## Review
 - Run for: none in progress (the workspace ships no code)
@@ -23,8 +25,7 @@ Updated: 2026-11-19, at the end of the session
 3. Refresh `open-work.md` against each project's new `STATE.md` as they appear.
 
 ## Waiting on owner
-- Before the first push (the repository is public): whether the notes about the private project
-  (LeptonPad: its release process, deploy host, version history) may be published as they are.
+- The word "push": the moved memory is committed locally and has not been pushed.
 - The Linux distro list for `linux-x64`; the two Mac test machines.
 
 ## Read next
