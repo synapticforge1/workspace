@@ -1,0 +1,10 @@
+﻿both assembled: 603
+bodies already identical: 64
+identical after regrouping the runtimes' locals: 533
+still different (other causes): 6
+  wasmtk/tests/module/wasm_mod/sieveOfEratosthenes_wat_mod.wat
+  wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/memory-multiple/memory-multiple.wat
+  wasmtk/tests/wasi/wasm_wasi/15_Exceptions.wat
+  wasmtk/tests/wasi/wasm_wasi/15_FinallyOnEveryExit.wat
+  wasmtk/tests/wasi/wasm_wasi/15_TestCase1-NestedEscalation.wat
+  wasmtk/tests/wasi/wasm_wasi/24_NullableStringFields.wat

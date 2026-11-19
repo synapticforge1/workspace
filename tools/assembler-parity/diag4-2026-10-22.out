@@ -1,0 +1,105 @@
+﻿
+=== module/wasm_mod/sieveOfEratosthenes_wat_mod.wat (index 22) ===
+-- wasm-tools print, first difference:
+  wasm-tools:
+    (module
+      (type (;0;) (func (param i32) (result i32)))
+      (memory (;0;) 4096)
+      (export "memory" (memory 0))
+      (export "sieve" (func $sieve))
+      (func $sieve (;0;) (type 0) (param $n i32) (result i32)
+        (local $i i32) (local $j i32) (local $count i32) (local $prime_index i32)
+  wasmrt:
+    (module
+      (type (;0;) (func (param i32) (result i32)))
+      (memory (;0;) 4096)
+      (export "sieve" (func $sieve))
+      (export "memory" (memory 0))
+      (func $sieve (;0;) (type 0) (param $n i32) (result i32)
+        (local $i i32) (local $j i32) (local $count i32) (local $prime_index i32)
+-- section headers, first difference:
+  wasm-tools:
+       Export start=0x0000001c end=0x0000002e (size=0x00000012) count: 2
+         Code start=0x00000031 end=0x000000ea (size=0x000000b9) count: 1
+       Custom start=0x000000ec end=0x00000168 (size=0x0000007c) "name"
+  wasmrt:
+       Export start=0x0000001c end=0x0000002e (size=0x00000012) count: 2
+         Code start=0x00000031 end=0x000000f0 (size=0x000000bf) count: 1
+       Custom start=0x000000f2 end=0x0000016e (size=0x0000007c) "name"
+
+=== module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/memory-multiple/memory-multiple.wat (index 81) ===
+-- wasm-tools print, first difference:
+  wasm-tools:
+      (type (;1;) (func (param i32)))
+      (memory $memX (;0;) 1)
+      (memory $memY (;1;) 1)
+      (export "memX" (memory $memX))
+      (export "memY" (memory $memY))
+      (export "sum_some_items" (func 0))
+      (export "docopy" (func 1))
+  wasmrt:
+      (type (;1;) (func (param i32)))
+      (memory $memX (;0;) 1)
+      (memory $memY (;1;) 1)
+      (export "sum_some_items" (func 0))
+      (export "docopy" (func 1))
+      (export "memX" (memory $memX))
+      (export "memY" (memory $memY))
+-- section headers, first difference:
+  (identical)
+
+=== wasi/wasm_wasi/15_Exceptions.wat (index 117) ===
+-- wasm-tools print, first difference:
+  wasm-tools:
+      (type (;11;) (func (param i32 i64)))
+      (type (;12;) (func (param f64 i32) (result i32)))
+      (type (;13;) (func (param i64 i32) (result i32)))
+      (type (;14;) (func (result i32 i32)))
+      (type (;15;) (func))
+      (import "wasi_snapshot_preview1" "proc_exit" (func $proc_exit (;0;) (type 0) (param i32)))
+      (import "wasi_snapshot_preview1" "fd_write" (func $fd_write (;1;) (type 1) (param i32 i32 i32 i32) (result i32)))
+  wasmrt:
+      (type (;11;) (func (param i32 i64)))
+      (type (;12;) (func (param f64 i32) (result i32)))
+      (type (;13;) (func (param i64 i32) (result i32)))
+      (type (;14;) (func))
+      (type (;15;) (func (result i32 i32)))
+      (import "wasi_snapshot_preview1" "proc_exit" (func $proc_exit (;0;) (type 0) (param i32)))
+      (import "wasi_snapshot_preview1" "fd_write" (func $fd_write (;1;) (type 1) (param i32 i32 i32 i32) (result i32)))
+-- section headers, first difference:
+  wasm-tools:
+       Export start=0x00000105 end=0x00000124 (size=0x0000001f) count: 3
+         Code start=0x00000127 end=0x000012ca (size=0x000011a3) count: 30
+         Data start=0x000012cd end=0x0000139a (size=0x000000cd) count: 12
+  wasmrt:
+       Export start=0x00000105 end=0x00000124 (size=0x0000001f) count: 3
+         Code start=0x00000127 end=0x00001370 (size=0x00001249) count: 30
+         Data start=0x00001373 end=0x00001440 (size=0x000000cd) count: 12
+
+=== wasi/wasm_wasi/15_TestCase1-NestedEscalation.wat (index 121) ===
+-- wasm-tools print, first difference:
+  wasm-tools:
+      (type (;10;) (func (param i32 i64)))
+      (type (;11;) (func (param f64 i32) (result i32)))
+      (type (;12;) (func (param i64 i32) (result i32)))
+      (type (;13;) (func (result i32 i32)))
+      (type (;14;) (func))
+      (import "wasi_snapshot_preview1" "proc_exit" (func $proc_exit (;0;) (type 0) (param i32)))
+      (import "wasi_snapshot_preview1" "fd_write" (func $fd_write (;1;) (type 1) (param i32 i32 i32 i32) (result i32)))
+  wasmrt:
+      (type (;10;) (func (param i32 i64)))
+      (type (;11;) (func (param f64 i32) (result i32)))
+      (type (;12;) (func (param i64 i32) (result i32)))
+      (type (;13;) (func))
+      (type (;14;) (func (result i32 i32)))
+      (import "wasi_snapshot_preview1" "proc_exit" (func $proc_exit (;0;) (type 0) (param i32)))
+      (import "wasi_snapshot_preview1" "fd_write" (func $fd_write (;1;) (type 1) (param i32 i32 i32 i32) (result i32)))
+-- section headers, first difference:
+  wasm-tools:
+       Export start=0x000000fe end=0x00000134 (size=0x00000036) count: 4
+         Code start=0x00000137 end=0x00001265 (size=0x0000112e) count: 26
+         Data start=0x00001267 end=0x000012c3 (size=0x0000005c) count: 3
+  wasmrt:
+       Export start=0x000000fe end=0x00000134 (size=0x00000036) count: 4
+         Code start=0x00000137 end=0x000012ea (size=0x000011b3) count: 26
+         Data start=0x000012ec end=0x00001348 (size=0x0000005c) count: 3

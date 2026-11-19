@@ -1,0 +1,56 @@
+﻿
+=== wasi/wasm_wasi/15_FinallyOnEveryExit.wat (index 118) ===
+-- wasm-tools print, first difference:
+  wasm-tools:
+      (type (;10;) (func (param i32 i64)))
+      (type (;11;) (func (param f64 i32) (result i32)))
+      (type (;12;) (func (param i64 i32) (result i32)))
+      (type (;13;) (func (result i32 i32)))
+      (type (;14;) (func (result i32)))
+      (type (;15;) (func (param f64) (result f64)))
+      (type (;16;) (func))
+  wasmrt:
+      (type (;10;) (func (param i32 i64)))
+      (type (;11;) (func (param f64 i32) (result i32)))
+      (type (;12;) (func (param i64 i32) (result i32)))
+      (type (;13;) (func (result i32)))
+      (type (;14;) (func (param f64) (result f64)))
+      (type (;15;) (func))
+      (type (;16;) (func (result i32 i32)))
+-- section headers, first difference:
+  wasm-tools:
+       Export start=0x00000124 end=0x00000143 (size=0x0000001f) count: 3
+         Code start=0x00000146 end=0x00001f39 (size=0x00001df3) count: 35
+         Data start=0x00001f3b end=0x00001f81 (size=0x00000046) count: 8
+  wasmrt:
+       Export start=0x00000124 end=0x00000143 (size=0x0000001f) count: 3
+         Code start=0x00000146 end=0x00002004 (size=0x00001ebe) count: 35
+         Data start=0x00002006 end=0x0000204c (size=0x00000046) count: 8
+
+=== wasi/wasm_wasi/24_NullableStringFields.wat (index 210) ===
+-- wasm-tools print, first difference:
+  wasm-tools:
+      (type (;15;) (func (param i32 i64)))
+      (type (;16;) (func (param f64 i32) (result i32)))
+      (type (;17;) (func (param i64 i32) (result i32)))
+      (type (;18;) (func (result i32 i32)))
+      (type (;19;) (func))
+      (import "wasi_snapshot_preview1" "proc_exit" (func $proc_exit (;0;) (type 0) (param i32)))
+      (import "wasi_snapshot_preview1" "fd_write" (func $fd_write (;1;) (type 1) (param i32 i32 i32 i32) (result i32)))
+  wasmrt:
+      (type (;15;) (func (param i32 i64)))
+      (type (;16;) (func (param f64 i32) (result i32)))
+      (type (;17;) (func (param i64 i32) (result i32)))
+      (type (;18;) (func))
+      (type (;19;) (func (result i32 i32)))
+      (import "wasi_snapshot_preview1" "proc_exit" (func $proc_exit (;0;) (type 0) (param i32)))
+      (import "wasi_snapshot_preview1" "fd_write" (func $fd_write (;1;) (type 1) (param i32 i32 i32 i32) (result i32)))
+-- section headers, first difference:
+  wasm-tools:
+       Export start=0x00000138 end=0x0000014b (size=0x00000013) count: 2
+         Code start=0x0000014e end=0x000020c4 (size=0x00001f76) count: 41
+         Data start=0x000020c7 end=0x0000218a (size=0x000000c3) count: 17
+  wasmrt:
+       Export start=0x00000138 end=0x0000014b (size=0x00000013) count: 2
+         Code start=0x0000014e end=0x000021a4 (size=0x00002056) count: 41
+         Data start=0x000021a7 end=0x0000226a (size=0x000000c3) count: 17

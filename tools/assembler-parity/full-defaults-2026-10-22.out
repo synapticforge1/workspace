@@ -1,0 +1,75 @@
+﻿files: 605
+  25/605
+  50/605
+  75/605
+  100/605
+  125/605
+  150/605
+  175/605
+  200/605
+  225/605
+  250/605
+  275/605
+  300/605
+  325/605
+  350/605
+  375/605
+  400/605
+  425/605
+  450/605
+  475/605
+  500/605
+  525/605
+  550/605
+  575/605
+  600/605
+
+== assembled OK per tool ==
+wasmtools    603/605
+wabt         567/605
+wabtnames    567/605
+wasmrt       603/605
+wazmrt       603/605
+binaryang    510/605
+binaryangNT  510/605
+
+== custom sections written (count of files carrying each), per tool ==
+wasmtools    {"custom:name":600} datacount:0
+wabt         {} datacount:0
+wabtnames    {"custom:name":567} datacount:0
+wasmrt       {"custom:name":600} datacount:0
+wazmrt       {"custom:name":600} datacount:0
+binaryang    {"custom:name":510,"custom:binaryang.text-form":187} datacount:0
+binaryangNT  {"custom:name":510} datacount:0
+
+== pairwise: files where BOTH assembled → identical bytes / identical body (custom stripped) / bodies differ ==
+wasmtools    vs wabt         both=567  bytes=  3  body-only=564  bodies-differ=  0
+wasmtools    vs wabtnames    both=567  bytes= 31  body-only=536  bodies-differ=  0
+wasmtools    vs wasmrt       both=603  bytes= 64  body-only=  0  bodies-differ=539
+wasmtools    vs wazmrt       both=603  bytes=603  body-only=  0  bodies-differ=  0
+wasmtools    vs binaryang    both=510  bytes= 24  body-only=486  bodies-differ=  0
+wasmtools    vs binaryangNT  both=510  bytes= 47  body-only=463  bodies-differ=  0
+wabt         vs wabtnames    both=567  bytes=  0  body-only=567  bodies-differ=  0
+wabt         vs wasmrt       both=567  bytes=  1  body-only= 58  bodies-differ=508
+wabt         vs wazmrt       both=567  bytes=  3  body-only=564  bodies-differ=  0
+wabt         vs binaryang    both=510  bytes=  0  body-only=510  bodies-differ=  0
+wabt         vs binaryangNT  both=510  bytes=  0  body-only=510  bodies-differ=  0
+wabtnames    vs wasmrt       both=567  bytes= 28  body-only= 31  bodies-differ=508
+wabtnames    vs wazmrt       both=567  bytes= 31  body-only=536  bodies-differ=  0
+wabtnames    vs binaryang    both=510  bytes= 31  body-only=479  bodies-differ=  0
+wabtnames    vs binaryangNT  both=510  bytes= 61  body-only=449  bodies-differ=  0
+wasmrt       vs wazmrt       both=603  bytes= 64  body-only=  0  bodies-differ=539
+wasmrt       vs binaryang    both=510  bytes= 15  body-only= 42  bodies-differ=453
+wasmrt       vs binaryangNT  both=510  bytes= 32  body-only= 25  bodies-differ=453
+wazmrt       vs binaryang    both=510  bytes= 24  body-only=486  bodies-differ=  0
+wazmrt       vs binaryangNT  both=510  bytes= 47  body-only=463  bodies-differ=  0
+binaryang    vs binaryangNT  both=510  bytes=323  body-only=187  bodies-differ=  0
+
+== refusals (tool: count, first reasons) ==
+wasmtools: 2× error: unexpected token, expected one of: `funcref`, `externref`, `exnref`, `contref`, `anyref`, `eqref`, `structref`, `arrayref`, `i31ref`, `nullfuncref`, `nul
+wabt: 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat:6:31: error: unexpecte | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat:2:36: error: unexpected  | 1× <workspace>/wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/gc-array-of-structs/gc-arra | 1× <workspace>/wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/gc-cast-check-and-i31/gc-ca
+wabtnames: 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat:6:31: error: unexpecte | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat:2:36: error: unexpected  | 1× <workspace>/wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/gc-array-of-structs/gc-arra | 1× <workspace>/wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/gc-cast-check-and-i31/gc-ca
+wasmrt: 1× wasmrt: <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat: obsolete keyw | 1× wasmrt: <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat: obsolete keywor
+wazmrt: 2× 
+binaryang: 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat:6:31: error: expected  | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat:2:36: error: expected va | 1× <workspace>/wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/gc-array-of-structs/gc-arra | 1× <workspace>/wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/gc-cast-check-and-i31/gc-ca
+binaryangNT: 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat:6:31: error: expected  | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat:2:36: error: expected va | 1× <workspace>/wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/gc-array-of-structs/gc-arra | 1× <workspace>/wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/gc-cast-check-and-i31/gc-ca

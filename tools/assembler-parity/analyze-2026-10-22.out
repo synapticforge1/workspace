@@ -1,0 +1,14 @@
+﻿== name section: binaryang writes one, wasm-tools does not ==
+  wasmtk/tests/module/wasm_mod/fib_wat_mod.wat  wasm-tools:false binaryang:true wasmrt:false
+  wasmtk/tests/module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/import-between-modules/mod1.wat  wasm-tools:false binaryang:true wasmrt:false
+  wasmtk/tests/wasi/wasm_wasi/1_fib-rs.wat  wasm-tools:false binaryang:true wasmrt:false
+
+== upstream wabt 1.0.41 refusals where wasm-tools accepts (grouped by first error words) ==
+  6× <workspace>/wasmtk/test
+      e.g. module/wasm_wast/wasm-wat-samples-main/wasm-wat-samples-main/gc-array-of-structs/gc-array-of-structs.wat
+
+== binaryang text-form custom section: bytes it adds over --no-text-form ==
+  files carrying it: 225; extra bytes: 23952 over 3463986 (0.7%)
+
+== size: runtimes' output vs wasm-tools, summed over files both assembled ==
+  603 files: wasmrt 5491575 B, wasm-tools 5399030 B, delta 92545 B (1.71%)

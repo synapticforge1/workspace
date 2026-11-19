@@ -1,0 +1,73 @@
+files: 532
+  25/532
+  50/532
+  75/532
+  100/532
+  125/532
+  150/532
+  175/532
+  200/532
+  225/532
+  250/532
+  275/532
+  300/532
+  325/532
+  350/532
+  375/532
+  400/532
+  425/532
+  450/532
+  475/532
+  500/532
+  525/532
+
+== assembled OK per tool ==
+wasmtools    528/532
+wabt         499/532
+wabtnames    499/532
+wasmrt       528/532
+wazmrt       528/532
+binaryang    528/532
+binaryangNT  528/532
+
+== custom sections written (count of files carrying each), per tool ==
+wasmtools    {"custom:name":525} datacount:0
+wabt         {} datacount:0
+wabtnames    {"custom:name":499} datacount:0
+wasmrt       {"custom:name":525} datacount:0
+wazmrt       {"custom:name":525} datacount:0
+binaryang    {"custom:name":528,"custom:binaryang.text-form":190} datacount:0
+binaryangNT  {"custom:name":528} datacount:0
+
+== pairwise: files where BOTH assembled → identical bytes / identical body (custom stripped) / bodies differ ==
+wasmtools    vs wabt         both=499  bytes=  3  body-only=496  bodies-differ=  0
+wasmtools    vs wabtnames    both=499  bytes= 31  body-only=468  bodies-differ=  0
+wasmtools    vs wasmrt       both=528  bytes= 64  body-only=  0  bodies-differ=464
+wasmtools    vs wazmrt       both=528  bytes= 64  body-only=  0  bodies-differ=464
+wasmtools    vs binaryang    both=528  bytes= 25  body-only=503  bodies-differ=  0
+wasmtools    vs binaryangNT  both=528  bytes= 50  body-only=478  bodies-differ=  0
+wabt         vs wabtnames    both=499  bytes=  0  body-only=499  bodies-differ=  0
+wabt         vs wasmrt       both=499  bytes=  1  body-only= 58  bodies-differ=440
+wabt         vs wazmrt       both=499  bytes=  1  body-only= 58  bodies-differ=440
+wabt         vs binaryang    both=499  bytes=  0  body-only=499  bodies-differ=  0
+wabt         vs binaryangNT  both=499  bytes=  0  body-only=499  bodies-differ=  0
+wabtnames    vs wasmrt       both=499  bytes= 28  body-only= 31  bodies-differ=440
+wabtnames    vs wazmrt       both=499  bytes= 28  body-only= 31  bodies-differ=440
+wabtnames    vs binaryang    both=499  bytes= 29  body-only=470  bodies-differ=  0
+wabtnames    vs binaryangNT  both=499  bytes= 64  body-only=435  bodies-differ=  0
+wasmrt       vs wazmrt       both=528  bytes=528  body-only=  0  bodies-differ=  0
+wasmrt       vs binaryang    both=528  bytes= 16  body-only= 48  bodies-differ=464
+wasmrt       vs binaryangNT  both=528  bytes= 35  body-only= 29  bodies-differ=464
+wazmrt       vs binaryang    both=528  bytes= 16  body-only= 48  bodies-differ=464
+wazmrt       vs binaryangNT  both=528  bytes= 35  body-only= 29  bodies-differ=464
+binaryang    vs binaryangNT  both=528  bytes=338  body-only=190  bodies-differ=  0
+
+== refusals (tool: count, first reasons) ==
+wasmtools: 2× error: inline function type doesn't match type reference | 2× error: unexpected token, expected one of: `funcref`, `externref`, `exnref`, `contref`, `anyref`, `eqref`, `structref`, `arrayref`, `i31ref`, `nullfuncref`, `nul
+wabt: 1× <workspace>/wasmtk/tests/module/bindgen_fixtures/fnany_50.wat:3:4: error: invalid func type index 0 | 1× <workspace>/wasmtk/tests/module/bindgen_fixtures/hostfn_50.wat:3:4: error: invalid func type index 0 | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat:6:31: error: unexpecte | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat:2:36: error: unexpected 
+wabtnames: 1× <workspace>/wasmtk/tests/module/bindgen_fixtures/fnany_50.wat:3:4: error: invalid func type index 0 | 1× <workspace>/wasmtk/tests/module/bindgen_fixtures/hostfn_50.wat:3:4: error: invalid func type index 0 | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat:6:31: error: unexpecte | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat:2:36: error: unexpected 
+wasmrt: 1× wasmrt: <workspace>/wasmtk/tests/module/bindgen_fixtures/fnany_50.wat: inline function type doesn't match type re | 1× wasmrt: <workspace>/wasmtk/tests/module/bindgen_fixtures/hostfn_50.wat: inline function type doesn't match type r | 1× wasmrt: <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat: obsolete keyw | 1× wasmrt: <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat: obsolete keywor
+wazmrt: 4× 
+binaryang: 1× <workspace>/wasmtk/tests/module/bindgen_fixtures/fnany_50.wat:3:93: error: inline function type does not match ex | 1× <workspace>/wasmtk/tests/module/bindgen_fixtures/hostfn_50.wat:3:93: error: inline function type does not match e | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat:6:31: error: expected  | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat:2:36: error: expected va
+binaryangNT: 1× <workspace>/wasmtk/tests/module/bindgen_fixtures/fnany_50.wat:3:93: error: inline function type does not match ex | 1× <workspace>/wasmtk/tests/module/bindgen_fixtures/hostfn_50.wat:3:93: error: inline function type does not match e | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_export.wat:6:31: error: expected  | 1× <workspace>/wasmtk/tests/module/wasm_wast/ArtOfWebAssembly_tests/Chapter3/table_test.wat:2:36: error: expected va
+exit=0

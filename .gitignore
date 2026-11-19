@@ -1,0 +1,12 @@
+# Machine facts and backups: never tracked (privacy rule).
+cmem/local/
+
+# Open review issues stay local (review standard).
+cmem/review-issues.md
+
+# Generated measurement output: the scripts and the .out summaries are tracked, the dumps are not.
+tools/assembler-parity/*/
+
+# Session and editor state.
+.claude/
+.vscode/
