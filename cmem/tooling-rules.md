@@ -190,3 +190,37 @@ same tooling errors "pop up over and over" and cause unnecessary rework.
    a file — closed items move to `cmem/archive/`, grouped by release, IDs kept; working artifacts
    leave `cmem/`. The size check (`../tools/check-cmem.ts`, copied to each repo's
    `scripts/check-cmem.ts`) runs at the end of every session.
+
+15. 🔒 **Scratch space is bounded and cleaned by the session that used it (owner, 2026-11-19:** "It
+   can't be an unbounded storage space, as it consumes a hardrive space very quickly if not managed
+   properly"**).** Measured 2026-11-19: 1.2 GB in 66,000 files across 51 session folders, all written
+   within two days. Letter H43.
+   - **This covers EVERY scratch and cache location** (owner, 2026-11-19: "This should apply to all
+     scratchpad locations"): the session scratchpad, the system temp folder, a WSL home or `/tmp`,
+     a build cache placed outside the repository, and any folder a tool or a session makes for
+     throwaway work — on every machine. A path there is a machine fact: never in a tracked file.
+   - **A session writes throwaway files only in its own scratchpad folder** — no other temp
+     location, no other session's folder.
+   - 🔒 **Project data lives in the project folder, nowhere else** (owner's standing rule). Notes,
+     decisions, records, results and state go in the project's `cmem/` (private ones in
+     `cmem/local/`) — never only in scratch, in a temp folder, or in the assistant's own
+     per-project memory folder under the user profile. A session that finds a fact stored
+     outside the project copies it into `cmem/` and removes the outside copy.
+   - **A cache outside the repository is named and bounded:** the project records, in
+     `cmem/local/`, where it is, why it is outside, its size limit, and the command that clears
+     it; it is cleared when it passes the limit or when its toolchain version is retired.
+   - **Delete when the item is cleared, not at the end of the day:** a one-time script after its
+     run; a reproducer, clone or build output when its finding is fixed and verified; a reviewer's
+     folder (clones, mutants, planted inputs) when its round is triaged.
+   - **Nothing lives only in scratch.** What is worth keeping moves into the project first (a
+     tracked file, or the gitignored `cmem/local/`); a reboot or a clean-up may clear scratch.
+   - **Budget: 200 MB per session folder.** Before making anything larger (a clone, a corpus, a
+     build tree, an install), say so, and remove it as soon as the step that needed it is done.
+     A project may record a different budget with its reason in its `working-rules.md`.
+   - **The owner's "commit" ends with an empty scratchpad:** before the memory update, the session
+     deletes what it wrote there, and `STATE.md` never points at a scratch file.
+   - **Sub-agents:** each works in a folder under the main session's scratchpad; the main session
+     removes those folders. A sub-agent's brief says so.
+   - **The machine-wide sweep is the workspace's:** `bun tools/clean-scratch.ts` lists session
+     folders with no file written for 3 days (a dry run); `--delete` removes them, on the owner's
+     word. A session never deletes another session's folder by hand — it may be in use.

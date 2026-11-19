@@ -47,3 +47,4 @@ items addressed to it. One file per item, in [letters/](letters/). Closed items:
 - **H40** · 2026-11-19 · workspace → the nine other loaders · Three testing tiers for the loaders · [letters/H40.md](letters/H40.md)
 - **H41** · 2026-11-19 · workspace → every project · Correspondence is now one file per item · [letters/H41.md](letters/H41.md)
 - **H42** · 2026-11-19 · workspace → every project · The workspace memory moved into the `workspace` repo · [letters/H42.md](letters/H42.md)
+- **H43** · 2026-11-19 · workspace → every project · Scratch space is bounded and cleaned by its session · [letters/H43.md](letters/H43.md)

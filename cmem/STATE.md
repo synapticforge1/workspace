@@ -9,7 +9,7 @@ Updated: 2026-11-19, at the end of the session
 ## Now
 - The owner's three standards are out to the projects: reviews (H37), memory (H38), platforms (H39, H40).
 - The workspace's own memory was migrated to the memory guide on 2026-11-19 (H41).
-- Correspondence is one file per open item in `letters/`; 26 items are open (H42: the move).
+- Correspondence is one file per open item in `letters/`; 27 items are open (H43: scratch space).
 - The private project's host and site details are stripped from every tracked note (owner's rule
   for this public repository: `working-rules.md`, the role of a session).
 
