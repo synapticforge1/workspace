@@ -3,73 +3,30 @@
 Only open items. Each points at its owner repo's record. Closed items leave this file; their record
 stays in the owning repo. Created 2026-09-20; owner decisions of the same date folded in.
 
-## Owner actions (🗓️ OWNER — gather evidence and stop)
+## Owner actions
 
-- (Closed 2026-10-27: 🔒 **ub-cosmic REMOVED** — owner: "deleted from here and the repo". Its rows
-  are closed as moot (X13; ub-cosmic parts of X11, X12, X16, X17, P7, H16, H22, H26, H28). Any GHCR
-  images or Artifact Hub listing it published are outside the repo — yours, if they still exist.)
-- (Closed 2026-10-26: the CLI decision and the lockstep rule reached wasmrt — its `interop.md` is
-  byte-identical to wazmrt's v40; lockstep itself ended at v33, owner 2026-10-23. H1.)
-- (Closed 2026-10-23: rsxtk's build-output history rewrite — done with its H19 purge, owner "it
-  is ok to change the files"; `.git` 416.55 MiB → 2.93 MiB. GitHub's read-only `refs/pull/1/head`
-  still reaches the old history — 🔒 the owner is handling that with the rsxtk session, 2026-10-23;
-  not a workspace item.)
-- (Closed 2026-10-26: every wazmrt release `v1.0.1`–`v5.0.0` is tagged on GitHub.)
-- (Closed 2026-10-28: 🔒 **wabt-ts and binaryen-ts RETIRED** — GitHub repos deleted; on JSR
-  **every** version is yanked, 1.5.1 included, both packages archived (binaryang measured the API,
-  `dd56376bd (was 3e0f7bc1a)`; this file had said "except 1.5.1"); binaryang's mirror commit `2325cf4a4 (was 04f31c916)` is on its
-  `origin/main`. H28.)
-- **Unpushed, yours to push (measured 2026-11-12):** **zailc `main` 24 ahead** (every decision of
-  2026-11-05 — the clean slate, 0.0.1, TypeScript syntax — and its C22–C25 / C28 answers; zilc
-  cannot verify C22–C25 against GitHub until it lands); **S3D `main` 40 ahead** (task 19's native
-  renderer, review rounds, and `cmem/review-process.md` — C46); LeptonPad `dev` 1. Everything else
-  equals GitHub. Uncommitted: zilc 12 files (the sarcasm port, its H31 fix), S3D 7, and the
-  "Owner commands" section (H34) still waiting in wasmrt, wazmrt, zilc, zailc, loader-dotnet.
-- (Decided 2026-11-19: the ★ copy stays, as each repo's own `cmem/best-practices-shared.md`, about 10 KB;
-  the workspace's file is split in two by section. Letter H38.)
-- (Decided 2026-11-19: LeptonPad follows the guide; the workspace migrated its own `cmem/` —
-  1 problem left of 327, letter H41.)
-- (Decided 2026-11-19: the root `CLAUDE.md` is a pointer to `cmem/STATE.md` and `cmem/INDEX.md`;
-  its rule digest is in `archive/CLAUDE-to-2026-11-19.md`, the rules in `working-rules.md` and
-  `tooling-rules.md`.)
-- **Review standard, final (H37, 2026-11-17) — yours:** the two test machines (an x86_64 Mac with
-  Parallels 26 for the x86_64 Windows and Linux guests; an arm64 Mac with Parallels 27 for the
-  arm64 guests). Decided 2026-11-17: a release goes out on the platforms that have a machine
-  today and lists the rest as `pending`; each is added later by an add-platform run at the
-  released tag. Each project does its six work items at its next session.
-- **Not yet on the release process (H33):** wasmrt (still `cargo publish` from your machine — D2),
-  wazmrt, zilc, zailc, loader-dotnet — each at its next session; wasmtk and loader-c have it but
-  have not released since.
-- (Done 2026-11-12: S3D's review process is the standard for every project —
-  `review-process.md`, Tooling rule 13, letter H35. Each project adds the three words and fills its
-  slots at its next session.)
-- (Decided 2026-11-10, `release-process.md` § 8: D1 the order checks → CI tag → page → publish,
-  every project; D2 crates.io from CI, trusted publishing; D3 `cmem/release.md` § "Release
-  History", newest first, with a summary per version. Sent as H33's addendum.)
-- **wasmtk ⇄ binaryang 3.0 (C43):** wasmtk pins binaryang 2.2.0 exactly; 3.0.2 is out (a major).
-  wasmtk has recorded what to check at the bump — the bump itself waits on your word.
-- **Bun (H31, 2026-11-09):** your rule — every Bun-version notation follows the latest installed
-  Bun (1.4.4). Behind it now: zailc, zilc only. When you install a newer Bun, nothing else to do —
-  each repo re-checks at its next session.
-- (Closed 2026-10-26, ledger C9: `safe.directory` is a wildcard for the workspace folder in the
-  SYSTEM config; no override needed in any of the 22 repos.)
-- **wasmtk**: H6.5b consumer suites — **only your go-ahead is left** (2026-10-26 night: the
-  fixtures are re-stamped and identical in all ten ports, -v and -zig have suites); it then gates
-  the next 3.x. JSR's provenance for pre-purge commits ("I will fix the jsr"); decisions N1, N3,
-  N4 of the number model.
-- **Loaders (2026-11-08):** send loader-dart's GitHub Support letter (its `cmem/open-work.md`);
-  the Zigistry topic for loader-zig — a web-UI item, yours (old tags' Release pages for -zig and -v
-  are dropped: only new tags get pages, owner 2026-11-09) (🔒 no `gh`, 2026-11-08, Tooling rule 9). ~~push
-  loader-zig's 3 commits~~ ✅ pushed with 2.0.0; ~~loader-go outside the floor~~ ✅ under it
-  (`928d1df`, `fd5582f`); ~~the SPEC decision on "no `.wit`"~~ ✅ **decided 2026-11-07 → SPEC
-  4.0.0** (only an absent `.wit` is raw), all ten ports released on it (H29 closed 2026-11-08).
-- **Still yours under H19 (2026-10-30): only the GitHub Support requests** for old commits served
-  by hash — wasmtk, wazmrt, loader-dotnet, zilc have theirs drafted; zailc's is open; binaryang's
-  can name both of its purges. Every repo is purged and pushed — binaryang's benchmark blobs by its
-  second rewrite on 2026-10-28 (C26; all 16 historical blobs read here, clean).
-- (Closed 2026-10-23: wasmrt's `Cargo.toml` `repository` now names `synapticforge1/wasmrt`.)
-- (Closed — decided 2026-10-26, 🔒 owner: loader-jvm's Maven groupId `io.github.jrmarcum` STAYS;
-  drift L6, ledger C18. This line had stayed open by mistake; noticed 2026-11-05.)
+Measured 2026-11-20. Closed and decided items that stood here are in
+[archive/open-work-to-2026-11-20.md](archive/open-work-to-2026-11-20.md).
+
+- **Unpushed, yours to push:** binaryang branch `npm-provenance-poll` 4 commits; rsxtk 4 (its work
+  on H37, H38, H41–H43); LeptonPad `dev` 2; wazmrt 1; this workspace repo 1, plus answers that
+  project sessions wrote into `letters/` and left uncommitted.
+- **Uncommitted in the projects:** wasmtk 24 files (its `host.ts` refactor, in progress);
+  loader-dotnet 1 (the "Owner commands" section, since 2026-11-10); loader-js 1; wasmrt 1.
+- **The ten loaders have had no session since 2026-11-12.** Everything sent since waits there:
+  the review standard (H37), the memory guide (H38), the testing tiers (H40), the new letter
+  format and location (H41, H42) and the scratch rule (H43).
+- **Test machines** (H37): an x86_64 Mac with Parallels 26 and an arm64 Mac with Parallels 27.
+  Until then a release states what it was tested on and lists the rest as `pending`.
+- **The Linux distro list** for `linux-x64`: at least one glibc 2.28 distro (a RHEL 8 rebuild)
+  and one Alpine for the musl build (platforms.md).
+- **wasmtk:** H6.5b consumer suites — only your go-ahead is left; JSR's provenance for pre-purge
+  commits; decisions N1, N3, N4 of the number model. (Its binaryang bump is done: 2.2.0 → 4.0.0,
+  2026-11-18.)
+- **Loaders:** send loader-dart's GitHub Support letter (its `cmem/open-work.md`); the Zigistry
+  topic for loader-zig (a web-UI item).
+- **H19:** only the GitHub Support requests for old commits served by hash — wasmtk, wazmrt,
+  loader-dotnet and zilc have theirs drafted; zailc's is open; binaryang's can name both purges.
 - **zail and wasic: one definition of TypeScript-syntax semantics, or two?** (divergence I17,
   2026-11-07) zail's grammar is now TypeScript's syntax; wasmtk's `wasic` compiles TypeScript too.
   Both chose `number` = f64; integers, indexes, division and strings are chosen separately. Shared

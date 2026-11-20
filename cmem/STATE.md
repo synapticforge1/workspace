@@ -1,17 +1,17 @@
 # STATE: synapticforge1 workspace
 
-Updated: 2026-11-19, at the end of the session
+Updated: 2026-11-20, at the end of the session
 
 ## Version
-- The repository `synapticforge1/workspace` (public) since 2026-11-19; nothing is released from it.
-- Working branch: main; first published to GitHub on 2026-11-19
+- The repository `synapticforge1/workspace` (public); nothing is released from it.
+- Working branch: main
 
 ## Now
-- The owner's three standards are out to the projects: reviews (H37), memory (H38), platforms (H39, H40).
-- The workspace's own memory was migrated to the memory guide on 2026-11-19 (H41).
-- Correspondence is one file per open item in `letters/`; 27 items are open (H43: scratch space).
-- The private project's host and site details are stripped from every tracked note (owner's rule
-  for this public repository: `working-rules.md`, the role of a session).
+- Seven projects are working through the owner's standards (H37 reviews, H38 memory, H39 host.ts,
+  H41–H43): binaryang, LeptonPad, S3D-ReportCompiler, rsxtk, zilc, zailc, wazmrt.
+- wasmtk and wasmrt have started some; the ten loaders have had no session since 2026-11-12.
+- 23 correspondence items are open; H30, H31 and H32 closed on 2026-11-20.
+- New releases read on 2026-11-20: binaryang 4.1.1, wasmrt 2.0.2, wazmrt 5.0.1, LeptonPad 2.15.8.
 
 ## Review
 - Run for: none in progress (the workspace ships no code)
@@ -20,12 +20,13 @@ Updated: 2026-11-19, at the end of the session
 - Platforms passed: not applicable
 
 ## Next
-1. Verify the projects' answers to H37–H42 on each `origin/main`; close per item.
-2. Re-verify the open rows of `drift-register.md` (most date from 2026-09-20).
-3. Refresh `open-work.md` against each project's new `STATE.md` as they appear.
+1. Verify answers to H33, H34, H37–H43 as each project pushes; close per item.
+2. The ten loaders: H37–H43 and the tiers (H40) all wait for their next sessions.
+3. Re-verify the open rows of `drift-register.md` (most date from 2026-09-20).
 
 ## Waiting on owner
 - The Linux distro list for `linux-x64`; the two Mac test machines.
+- Pushes that are yours: see open-work.md.
 
 ## Read next
 - [workspace-correspondence.md](workspace-correspondence.md): the open items, before any other work
