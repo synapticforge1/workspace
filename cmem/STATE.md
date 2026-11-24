@@ -1,17 +1,18 @@
 # STATE: synapticforge1 workspace
 
-Updated: 2026-11-20, at the end of the session
+Updated: 2026-11-24, at the end of the session
 
 ## Version
 - The repository `synapticforge1/workspace` (public); nothing is released from it.
 - Working branch: main
 
 ## Now
-- Seven projects are working through the owner's standards (H37 reviews, H38 memory, H39 host.ts,
-  H41–H43): binaryang, LeptonPad, S3D-ReportCompiler, rsxtk, zilc, zailc, wazmrt.
-- wasmtk and wasmrt have started some; the ten loaders have had no session since 2026-11-12.
-- 23 correspondence items are open; H30, H31 and H32 closed on 2026-11-20.
-- New releases read on 2026-11-20: binaryang 4.1.1, wasmrt 2.0.2, wazmrt 5.0.1, LeptonPad 2.15.8.
+- Six projects pass the memory size check on GitHub: binaryang, wasmtk, rsxtk, LeptonPad,
+  S3D-ReportCompiler, zilc. Seven carry the review standard (those six and wasmrt).
+- The ten loaders have had no session since 2026-11-12; wazmrt's work is local, unpushed.
+- 25 correspondence items are open. New since 2026-11-20: C48 (wasmtk → binaryang), C49
+  (wasmtk's third history rewrite; the fixtures stamp changed), C50 (wasmrt → wazmrt, its 3.0.0).
+- New releases read on 2026-11-24: rsxtk 1.0.1 (its 1.0), binaryang 4.1.2.
 
 ## Review
 - Run for: none in progress (the workspace ships no code)
@@ -21,7 +22,7 @@ Updated: 2026-11-20, at the end of the session
 
 ## Next
 1. Verify answers to H33, H34, H37–H43 as each project pushes; close per item.
-2. The ten loaders: H37–H43 and the tiers (H40) all wait for their next sessions.
+2. The ten loaders: H37–H43, the tiers (H40) and C49's new fixtures stamp wait for their sessions.
 3. Re-verify the open rows of `drift-register.md` (most date from 2026-09-20).
 
 ## Waiting on owner

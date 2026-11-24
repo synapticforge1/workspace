@@ -72,3 +72,4 @@ Full rows: [workspace-correspondence-to-2026-11-19.md](workspace-correspondence-
 - **H30** · 2026-11-08 · workspace → every repo (left: zailc) · No gh, in CI too · closed 2026-11-20 by the workspace (creator)
 - **H31** · 2026-11-09 · workspace → every repo (left: zailc, zilc) · Bun-version notations follow the latest installed Bun · closed 2026-11-20 by the workspace (creator)
 - **H32** · 2026-11-09 · workspace → every repo that tags releases · CI makes the GitHub Release page · closed 2026-11-20 by the workspace (creator)
+- **C5** · 2026-10-26 · wasmrt → workspace · wasmrt's notes to verify and fold in · closed 2026-11-20 by wasmrt (creator)

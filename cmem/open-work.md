@@ -5,28 +5,29 @@ stays in the owning repo. Created 2026-09-20; owner decisions of the same date f
 
 ## Owner actions
 
-Measured 2026-11-20. Closed and decided items that stood here are in
-[archive/open-work-to-2026-11-20.md](archive/open-work-to-2026-11-20.md).
+Measured 2026-11-24. Earlier closed and decided items: [archive/open-work-to-2026-11-20.md](archive/open-work-to-2026-11-20.md).
 
-- **Unpushed, yours to push:** binaryang branch `npm-provenance-poll` 4 commits; rsxtk 4 (its work
-  on H37, H38, H41–H43); LeptonPad `dev` 2; wazmrt 1; this workspace repo 1, plus answers that
-  project sessions wrote into `letters/` and left uncommitted.
-- **Uncommitted in the projects:** wasmtk 24 files (its `host.ts` refactor, in progress);
-  loader-dotnet 1 (the "Owner commands" section, since 2026-11-10); loader-js 1; wasmrt 1.
-- **The ten loaders have had no session since 2026-11-12.** Everything sent since waits there:
-  the review standard (H37), the memory guide (H38), the testing tiers (H40), the new letter
-  format and location (H41, H42) and the scratch rule (H43).
+- **Unpushed, yours to push:** binaryang branch `fixes-batch` 65 commits ahead of `origin/main`;
+  wasmrt 4; zilc 2 (and 5 files uncommitted, work in progress); LeptonPad `dev` 2; wazmrt 1;
+  wasmtk branch `feat/number-model-2026-11-20` 1; this workspace repo 1, plus answers that project
+  sessions wrote into `letters/` and left uncommitted.
+- **Uncommitted in the projects:** loader-dotnet 1 (the "Owner commands" section, since
+  2026-11-10); loader-js 1; binaryang 1.
+- **The ten loaders have had no session since 2026-11-12.** Waiting there: the review standard
+  (H37), the memory guide (H38), the testing tiers (H40), the new letter format and location (H41,
+  H42), the scratch rule (H43), and wasmtk's new fixtures stamp after its third history rewrite
+  (C49 — loader-js first, then the nine ports).
 - **Test machines** (H37): an x86_64 Mac with Parallels 26 and an arm64 Mac with Parallels 27.
   Until then a release states what it was tested on and lists the rest as `pending`.
 - **The Linux distro list** for `linux-x64`: at least one glibc 2.28 distro (a RHEL 8 rebuild)
   and one Alpine for the musl build (platforms.md).
-- **wasmtk:** H6.5b consumer suites — only your go-ahead is left; JSR's provenance for pre-purge
-  commits; decisions N1, N3, N4 of the number model. (Its binaryang bump is done: 2.2.0 → 4.0.0,
-  2026-11-18.)
+- **wasmtk:** H6.5b consumer suites — only your go-ahead is left; decisions N1, N3, N4 of the
+  number model (its branch `feat/number-model-2026-11-20` is in progress).
 - **Loaders:** send loader-dart's GitHub Support letter (its `cmem/open-work.md`); the Zigistry
   topic for loader-zig (a web-UI item).
-- **H19:** only the GitHub Support requests for old commits served by hash — wasmtk, wazmrt,
-  loader-dotnet and zilc have theirs drafted; zailc's is open; binaryang's can name both purges.
+- **H19:** only the GitHub Support requests for old commits served by hash — wasmtk (now three
+  rewrites), wazmrt, loader-dotnet and zilc have theirs drafted; zailc's is open; binaryang's can
+  name both purges.
 - **zail and wasic: one definition of TypeScript-syntax semantics, or two?** (divergence I17,
   2026-11-07) zail's grammar is now TypeScript's syntax; wasmtk's `wasic` compiles TypeScript too.
   Both chose `number` = f64; integers, indexes, division and strings are chosen separately. Shared
