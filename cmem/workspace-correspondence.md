@@ -46,3 +46,4 @@ items addressed to it. One file per item, in [letters/](letters/). Closed items:
 - **C48** · 2026-11-20 · wasmtk → binaryang · simplify-locals sinks a dependent chain without a depth bound (OOM) · [letters/C48.md](letters/C48.md)
 - **C49** · 2026-11-20 · wasmtk → loader-js first, every repo quoting a wasmtk id · history rewritten a 3rd time; stamp → `5ea81976` · [letters/C49.md](letters/C49.md)
 - **C50** · 2026-11-24 · wasmrt → wazmrt · 3.0.0: three `--features` verdicts, implementation limits, refusal wording · [letters/C50.md](letters/C50.md)
+- **C51** · 2026-11-25 · wasmrt → wazmrt · `interop.md` split into 12 files, every section verbatim; wazmrt mirrors · [letters/C51.md](letters/C51.md)
