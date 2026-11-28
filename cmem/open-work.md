@@ -17,8 +17,8 @@ Measured 2026-11-27, every repo against GitHub (`ls-remote`). Earlier closed and
 - **binaryang, to confirm in its session:** its local branches went from 58 to 1. Four commits
   are now held only by the reflog and match nothing on `main` by content or by title (`fb01312bf`,
   `504047ee1`, `371ed605d`, `0c9372318`). They stay recoverable while the reflog keeps them.
-- **The owner's "push" and "merge to main"** (letter C54, from zailc): every project, or zailc
-  only? And does pruning cover the release branches kept on GitHub? Tooling rule 12 holds it.
+- (Decided 2026-11-27: "push" goes to the branch only, "merge to main" merges, pushes `main`, then
+  deletes the work branch; every project; record branches stay. Rule 12, letters C54 and H44.)
 - **Seven loaders have had no session since 2026-11-12** (-dart, -dotnet, -go, -py, -rs, -v, and
   -jvm and -c since 11-24). Waiting there: the review standard (H37), the memory guide (H38), the
   testing tiers (H40), the letter format and location (H41, H42), the scratch rule (H43), and

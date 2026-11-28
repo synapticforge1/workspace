@@ -12,8 +12,9 @@ Updated: 2026-11-27, after the projects pulled their machine-only data into thei
 - The seven projects that held machine-only data each wrote into their `cmem/local/` today:
   binaryang, wasmrt, wazmrt, zailc, zilc, loader-zig, loader-js. Contents not audited here.
 - Bun 1.4.5 is now the installed version (Tooling rule 10: notations follow it).
-- 28 correspondence items are open. New: C53 (zilc's test-machine needs), C54 (zailc: the owner's
-  "push" and "merge to main"). loader-js answered H37 in part.
+- 29 correspondence items are open. New: C53 (zilc's test-machine needs), C54 (zailc) and H44
+  (to every project): "push" now goes to the branch only; "merge to main" merges, pushes `main`,
+  then deletes the work branch (rule 12, decided by the owner 2026-11-27).
 
 ## Review
 - Run for: none in progress (the workspace ships no code)
@@ -27,8 +28,6 @@ Updated: 2026-11-27, after the projects pulled their machine-only data into thei
 3. Re-verify the open rows of `drift-register.md` (most date from 2026-09-20).
 
 ## Waiting on owner
-- C54: do "push" (to the branch only) and "merge to main" (merge, then prune) hold for every
-  project, and does pruning cover the release branches kept on GitHub? Rule 12 holds the draft.
 - binaryang: four commits held only by its reflog after its branches were removed (open-work.md).
 - The Linux distro list for `linux-x64`; the two Mac test machines.
 

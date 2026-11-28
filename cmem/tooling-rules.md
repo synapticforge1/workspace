@@ -152,27 +152,31 @@ same tooling errors "pop up over and over" and cause unnecessary rework.
    no longer tests) — no local tag, no workstation publish (crates.io included); and every project
    records its releases in ONE place, `cmem/release.md` § "Release History", newest first, with a
    summary of what changed in each.
-12. 🔒 **The owner's three words, every project (owner, 2026-11-10):** **"commit"** = run "update
-   the project memory files", then commit to the branch being worked on (nothing pushed);
-   **"push"** = "commit", then merge into `main`, then push `main` (and the branch) to GitHub and
-   read it back; **"release"** = "push", then the release process (rule 11; the level is the
-   owner's — ask if not given). Each includes the one before; none goes further than its own word.
-   Written into each project directly on the owner's direction ("please write that into each
+12. 🔒 **The owner's four words, every project (owner, 2026-11-10; amended 2026-11-27, letter
+   H44).** Each includes the one before; none goes further than its own word.
+   - **"commit"** = run "update the project memory files", then commit to the branch being worked
+     on. Nothing reaches GitHub.
+   - **"push"** = "commit", then push the working branch to ITS OWN branch on GitHub and read it
+     back with `git ls-remote`. Nothing is merged; `main` does not change. (Until 2026-11-27
+     "push" also merged into `main`.)
+   - **"merge to main"** = "push", then, in this order: merge the work branch into `main`; push
+     `main` to GitHub and read it back; delete the work branch on GitHub, then locally with
+     `git branch -d` (which refuses an unmerged branch).
+   - **"release"** = "merge to main" when the work is on a work branch, then the release process
+     (rule 11; the level is the owner's — ask if not given). The release runs from `main`.
+   - **Only the work branch just merged is deleted.** Release branches and review branches kept
+     on GitHub as a record stay (owner, 2026-11-27: "no. just the unmerged wip branches").
+   - When the session already works on `main`, "push" pushes `main` and "merge to main" has
+     nothing to merge or delete.
+
+   The first three words were written into each project directly on the owner's direction ("please write that into each
    project") — section "Owner commands" appended, uncommitted, to `cmem/working-rules.md`
    (binaryang, wazmrt, zilc, the ten loaders), `cmem/INDEX.md` (wasmtk, wasmrt, rsxtk, S3D,
    zailc — no working-rules file there) or `cmem/conventions.md` (LeptonPad); lisp-wat_interpreter
-   has no `cmem/`. Letter H34.
-   - **Change reported by zailc, 2026-11-27 (letter C54) — in force in zailc; NOT yet a rule for
-     every project, the owner has not confirmed it here.** Owner's words there: "pushing should
-     mean push to the branch on github. 'merge to main' should merge the branch to main and prune
-     the branch afterwards."
-     - **"push"** = "commit", then push the working branch to its own branch on GitHub and read it
-       back. Nothing is merged.
-     - **"merge to main"** = "push", then merge into `main`, push `main`, read it back, then delete
-       the merged branch on GitHub and locally (`git branch -d`, which refuses an unmerged branch).
-     - **"release"** = "merge to main", then the release process.
-     - Open for the owner: does it hold for every project, and does pruning also remove the old
-       release and review branches some projects keep on GitHub as a record?
+   has no `cmem/`. Letter H34. The 2026-11-27 amendment came from a zailc session (letter C54:
+   "pushing should mean push to the branch on github. 'merge to main' should merge the branch to
+   main and prune the branch afterwards"); the owner confirmed it for every project the same day.
+   Each project updates its own "Owner commands" section (letter H44).
 13. 🔒 **Reviews, every project — the FINAL standard (owner, 2026-11-17):**
    [review-process.md](review-process.md), letter H37. **Five required reviews before every
    release, in a fixed order — basic, hardening, licensing, security, privacy — after an optional
