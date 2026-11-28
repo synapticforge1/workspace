@@ -33,15 +33,23 @@ its own toolchain's target name beside the ID (e.g. `aarch64-unknown-linux-gnu` 
 
 | role | covers natively |
 | --- | --- |
-| dev machine | `win-x64`; `linux-x64` through WSL — **Ubuntu only** (owner, 2026-11-17) |
-| Intel Mac + Parallels 26 guests | `mac-x64`, `win-x64`, `linux-x64` — **a series of Linux distros** (owner, 2026-11-17) |
-| arm64 Mac + Parallels 27 guests | `mac-arm64`, `win-arm64`, `linux-arm64` |
+| dev machine (the Windows laptop) | `win-x64` — **the only `win-x64` machine** (owner, 2026-11-28: Parallels and Windows would not install on the Intel Mac); `linux-x64` through WSL — **Ubuntu only** (owner, 2026-11-17) |
+| Intel Mac + UTM guests | `mac-x64`, `linux-x64` — **a series of Linux distros** (owner, 2026-11-17); guests run under **UTM, not Parallels** (owner, 2026-11-28), virtualized, not emulated |
+| arm64 Mac + Parallels 26 guests | `mac-arm64`, `win-arm64`, `linux-arm64` (Parallels measured 26.5.0 on 2026-11-27; this row said 27) |
 
 The two Macs are the owner's to set up (open-work.md). Until a role exists, the platforms only it
 covers are `pending`.
 
 **`linux-x64` is one platform ID with a DISTRO axis.** WSL proves Ubuntu only; the other distros
-are trialled as Parallels guests on the Intel Mac. A project lists the distros it was tested on in
+are trialled in **containers on ONE Ubuntu host guest** (UTM, Intel Mac; Podman) — 🔒 owner,
+2026-11-28: "If we can run the common bases with one that works for all, that would be ideal. We
+may need to test ubuntu based systems for differences, versus strictly debian based, versus arch
+based, versus fedora based, etc". The families: Ubuntu, Debian, Fedora, the RHEL rebuilds
+(Rocky / Alma 8 = the glibc 2.28 floor), Arch, Alpine (musl), openSUSE optional — each at the
+versions in standard vendor support (the baseline below). A container shares the host guest's
+kernel and filesystem: a project whose behaviour depends on either gets a full UTM VM for that
+distro, and says so. Arch publishes an official image for x86_64 only (`linux-arm64` needs a
+community image or omits Arch). A project lists the distros it was tested on in
 the SECOND table of its `cmem/platforms.md` (review-process.md § 12: further axes), one row per
 distro — distro and version, libc (glibc version, or musl), status, tested on (role). A result
 line for `linux-x64` names the distro it ran on. Why distros differ enough to test: the libc

@@ -23,7 +23,7 @@ Measured 2026-11-27, every repo against GitHub (`ls-remote`). Earlier closed and
   -jvm and -c since 11-24). Waiting there: the review standard (H37), the memory guide (H38), the
   testing tiers (H40), the letter format and location (H41, H42), the scratch rule (H43), and
   wasmtk's new fixtures stamp (C49 — loader-js first, then the nine ports).
-- **Test machines** (H37): an x86_64 Mac with Parallels 26 and an arm64 Mac with Parallels 27.
+- **Test machines** (H37): an x86_64 Mac with UTM guests (Parallels would not install, owner 2026-11-28; `win-x64` stays on the Windows laptop) and an arm64 Mac with Parallels 26.5.
   Until then a release states what it was tested on and lists the rest as `pending`.
 - **The Linux distro list** for `linux-x64`: at least one glibc 2.28 distro (a RHEL 8 rebuild)
   and one Alpine for the musl build (platforms.md).
