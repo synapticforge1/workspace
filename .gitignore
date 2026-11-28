@@ -10,3 +10,7 @@ tools/assembler-parity/*/
 # Session and editor state.
 .claude/
 .vscode/
+
+# What macOS writes on a drive that is not its own format.
+.DS_Store
+._*

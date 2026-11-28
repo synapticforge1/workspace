@@ -12,6 +12,7 @@ Read STATE.md first. Open another file only when the task matches its line.
 - [memory-guide.md](memory-guide.md): when shaping any `cmem/` folder; limits and templates
 - [review-process.md](review-process.md): the review standard, during or about a review
 - [release-process.md](release-process.md): the release order and slots U1–U12, when a release is discussed
+- [machine-setup.md](machine-setup.md): before setting up a test machine or moving the project drive
 - [platforms.md](platforms.md): platform IDs, testing tiers, the glibc baseline, "Tested on"
 - [divergences.md](divergences.md): the classes and rules for cross-project differences; routes to the rows
 - [divergences-toolchain.md](divergences-toolchain.md): IR and text / binary toolchain differences (I rows)

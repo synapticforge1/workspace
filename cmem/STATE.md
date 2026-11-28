@@ -1,6 +1,6 @@
 # STATE: synapticforge1 workspace
 
-Updated: 2026-11-24, at the end of the session
+Updated: 2026-11-27, at the end of the session
 
 ## Version
 - The repository `synapticforge1/workspace` (public); nothing is released from it.
@@ -26,6 +26,8 @@ Updated: 2026-11-24, at the end of the session
 3. Re-verify the open rows of `drift-register.md` (most date from 2026-09-20).
 
 ## Waiting on owner
+- The project drive is moving to the test machines: seven projects first pull what is only on
+  the dev machine into their folders (machine-setup.md); then the setup of each test machine.
 - The Linux distro list for `linux-x64`; the two Mac test machines.
 - Pushes that are yours: see open-work.md.
 
