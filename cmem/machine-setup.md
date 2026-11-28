@@ -62,6 +62,24 @@ Machine names, paths and setting values are in `cmem/local/environment.md`, neve
 - **Linux guests:** glibc at or above the 2.28 baseline, and one Alpine guest for the musl builds
   ([platforms.md](platforms.md)).
 
+## What a project needs beyond the common setup
+
+One entry per project that told the workspace, with the letter that holds the detail.
+
+- **zilc** (letter C53, verified against its `origin/main` on 2026-11-27): an **x86_64 Linux guest
+  on the Intel Mac** — its checks run Fil-C's x86_64 `minilute` and every zilc tool refuses to
+  start outside Linux; `linux-x64` is its only platform. Not macOS, and not an arm64 Linux guest.
+  - Check first: `uname -m` prints `x86_64`.
+  - Setup, once: install Bun, clone zilc onto the guest's own disk, run `bun tools/p1/setup-wsl.ts`
+    (the name says WSL; it runs on any Linux). It installs Zig 0.15.2, the Fil-C 0.687 release and
+    patchelf, each checked against a recorded sha256. The first `zig build` fetches Fil-C's source
+    package into Zig's global cache — leave that cache where it is.
+  - Needs network access to GitHub and several GB of downloads.
+  - Done when `bun tools/sarcasm/check-stages.ts` prints `OK: every stage equal to upstream's`.
+  - zilc is pushing its local-only branches to GitHub (owner, 2026-11-27), so the guest fetches
+    them from there. Its unfinished checkpoint reaches the guest only once it is committed to
+    the work branch — uncommitted files are not pushed.
+
 ## What stays behind on the dev machine
 
 - The WSL distribution (zilc's and zailc's Linux work areas), the session scratch folders, the
