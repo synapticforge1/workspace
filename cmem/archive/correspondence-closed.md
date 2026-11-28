@@ -73,3 +73,4 @@ Full rows: [workspace-correspondence-to-2026-11-19.md](workspace-correspondence-
 - **H31** · 2026-11-09 · workspace → every repo (left: zailc, zilc) · Bun-version notations follow the latest installed Bun · closed 2026-11-20 by the workspace (creator)
 - **H32** · 2026-11-09 · workspace → every repo that tags releases · CI makes the GitHub Release page · closed 2026-11-20 by the workspace (creator)
 - **C5** · 2026-10-26 · wasmrt → workspace · wasmrt's notes to verify and fold in · closed 2026-11-20 by wasmrt (creator)
+- **C48** · 2026-11-20 · wasmtk → binaryang · simplify-locals sinks a dependent chain without a depth bound (OOM) · closed 2026-11-27 by wasmtk (creator)
