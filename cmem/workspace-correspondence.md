@@ -48,3 +48,4 @@ items addressed to it. One file per item, in [letters/](letters/). Closed items:
 - **C51** · 2026-11-25 · wasmrt → wazmrt · `interop.md` split into 12 files, every section verbatim; wazmrt mirrors · [letters/C51.md](letters/C51.md)
 - **C52** · 2026-11-25 · wasmrt → binaryang · four D1 names wasmrt spells differently (`select` 0x1c, three `… null` casts): which does D1 intend? · [letters/C52.md](letters/C52.md)
 - **C53** · 2026-11-27 · zilc → workspace · what zilc's sarcasm port needs on a platform-check machine (x86_64 Linux guest) · [letters/C53.md](letters/C53.md)
+- **C54** · 2026-11-27 · zailc → workspace · The owner's "push" and "merge to main", and branch pruning, for rule 12 · [letters/C54.md](letters/C54.md)

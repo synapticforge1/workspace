@@ -162,6 +162,17 @@ same tooling errors "pop up over and over" and cause unnecessary rework.
    (binaryang, wazmrt, zilc, the ten loaders), `cmem/INDEX.md` (wasmtk, wasmrt, rsxtk, S3D,
    zailc — no working-rules file there) or `cmem/conventions.md` (LeptonPad); lisp-wat_interpreter
    has no `cmem/`. Letter H34.
+   - **Change reported by zailc, 2026-11-27 (letter C54) — in force in zailc; NOT yet a rule for
+     every project, the owner has not confirmed it here.** Owner's words there: "pushing should
+     mean push to the branch on github. 'merge to main' should merge the branch to main and prune
+     the branch afterwards."
+     - **"push"** = "commit", then push the working branch to its own branch on GitHub and read it
+       back. Nothing is merged.
+     - **"merge to main"** = "push", then merge into `main`, push `main`, read it back, then delete
+       the merged branch on GitHub and locally (`git branch -d`, which refuses an unmerged branch).
+     - **"release"** = "merge to main", then the release process.
+     - Open for the owner: does it hold for every project, and does pruning also remove the old
+       release and review branches some projects keep on GitHub as a record?
 13. 🔒 **Reviews, every project — the FINAL standard (owner, 2026-11-17):**
    [review-process.md](review-process.md), letter H37. **Five required reviews before every
    release, in a fixed order — basic, hardening, licensing, security, privacy — after an optional

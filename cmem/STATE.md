@@ -1,18 +1,19 @@
 # STATE: synapticforge1 workspace
 
-Updated: 2026-11-27, at the end of the session
+Updated: 2026-11-27, after the projects pulled their machine-only data into their folders
 
 ## Version
 - The repository `synapticforge1/workspace` (public); nothing is released from it.
 - Working branch: main
 
 ## Now
-- Six projects pass the memory size check on GitHub: binaryang, wasmtk, rsxtk, LeptonPad,
-  S3D-ReportCompiler, zilc. Seven carry the review standard (those six and wasmrt).
-- The ten loaders have had no session since 2026-11-12; wazmrt's work is local, unpushed.
-- 25 correspondence items are open. New since 2026-11-20: C48 (wasmtk → binaryang), C49
-  (wasmtk's third history rewrite; the fixtures stamp changed), C50 (wasmrt → wazmrt, its 3.0.0).
-- New releases read on 2026-11-24: rsxtk 1.0.1 (its 1.0), binaryang 4.1.2.
+- Checked 2026-11-27, all 20 repos: every `main` equals GitHub's. One unpushed commit (LeptonPad
+  `dev`), one uncommitted file (loader-dotnet). Detail in open-work.md.
+- The seven projects that held machine-only data each wrote into their `cmem/local/` today:
+  binaryang, wasmrt, wazmrt, zailc, zilc, loader-zig, loader-js. Contents not audited here.
+- Bun 1.4.5 is now the installed version (Tooling rule 10: notations follow it).
+- 28 correspondence items are open. New: C53 (zilc's test-machine needs), C54 (zailc: the owner's
+  "push" and "merge to main"). loader-js answered H37 in part.
 
 ## Review
 - Run for: none in progress (the workspace ships no code)
@@ -21,15 +22,15 @@ Updated: 2026-11-27, at the end of the session
 - Platforms passed: not applicable
 
 ## Next
-1. Verify answers to H33, H34, H37–H43 as each project pushes; close per item.
-2. The ten loaders: H37–H43, the tiers (H40) and C49's new fixtures stamp wait for their sessions.
+1. Set up each test machine with the owner (machine-setup.md); zilc's guest first (C53).
+2. Verify answers to H33, H34, H37–H43 as each project pushes; close per item.
 3. Re-verify the open rows of `drift-register.md` (most date from 2026-09-20).
 
 ## Waiting on owner
-- The project drive is moving to the test machines: seven projects first pull what is only on
-  the dev machine into their folders (machine-setup.md); then the setup of each test machine.
+- C54: do "push" (to the branch only) and "merge to main" (merge, then prune) hold for every
+  project, and does pruning cover the release branches kept on GitHub? Rule 12 holds the draft.
+- binaryang: four commits held only by its reflog after its branches were removed (open-work.md).
 - The Linux distro list for `linux-x64`; the two Mac test machines.
-- Pushes that are yours: see open-work.md.
 
 ## Read next
 - [workspace-correspondence.md](workspace-correspondence.md): the open items, before any other work

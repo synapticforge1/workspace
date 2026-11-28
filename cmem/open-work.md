@@ -5,18 +5,24 @@ stays in the owning repo. Created 2026-09-20; owner decisions of the same date f
 
 ## Owner actions
 
-Measured 2026-11-24. Earlier closed and decided items: [archive/open-work-to-2026-11-20.md](archive/open-work-to-2026-11-20.md).
+Measured 2026-11-27, every repo against GitHub (`ls-remote`). Earlier closed and decided items:
+[archive/open-work-to-2026-11-20.md](archive/open-work-to-2026-11-20.md).
 
-- **Unpushed, yours to push:** binaryang branch `fixes-batch` 65 commits ahead of `origin/main`;
-  wasmrt 4; zilc 2 (and 5 files uncommitted, work in progress); LeptonPad `dev` 2; wazmrt 1;
-  wasmtk branch `feat/number-model-2026-11-20` 1; this workspace repo 1, plus answers that project
-  sessions wrote into `letters/` and left uncommitted.
+- **Every project's `main` equals GitHub's** (all 20 repos). **Unpushed:** LeptonPad `dev`, 1 commit
+  ahead of GitHub's `dev`. wasmtk's two work branches are on GitHub under a `wip/` prefix.
 - **Uncommitted in the projects:** loader-dotnet 1 (the "Owner commands" section, since
-  2026-11-10); loader-js 1; binaryang 1.
-- **The ten loaders have had no session since 2026-11-12.** Waiting there: the review standard
-  (H37), the memory guide (H38), the testing tiers (H40), the new letter format and location (H41,
-  H42), the scratch rule (H43), and wasmtk's new fixtures stamp after its third history rewrite
-  (C49 — loader-js first, then the nine ports).
+  2026-11-10). Nothing else.
+- **Branches only on the drive, every one already merged into `main`:** loader-js 16, loader-jvm
+  20, loader-v 16, S3D 1 (`trial/native-render`, with one stash of 2026-11-11), rsxtk 1.
+- **binaryang, to confirm in its session:** its local branches went from 58 to 1. Four commits
+  are now held only by the reflog and match nothing on `main` by content or by title (`fb01312bf`,
+  `504047ee1`, `371ed605d`, `0c9372318`). They stay recoverable while the reflog keeps them.
+- **The owner's "push" and "merge to main"** (letter C54, from zailc): every project, or zailc
+  only? And does pruning cover the release branches kept on GitHub? Tooling rule 12 holds it.
+- **Seven loaders have had no session since 2026-11-12** (-dart, -dotnet, -go, -py, -rs, -v, and
+  -jvm and -c since 11-24). Waiting there: the review standard (H37), the memory guide (H38), the
+  testing tiers (H40), the letter format and location (H41, H42), the scratch rule (H43), and
+  wasmtk's new fixtures stamp (C49 — loader-js first, then the nine ports).
 - **Test machines** (H37): an x86_64 Mac with Parallels 26 and an arm64 Mac with Parallels 27.
   Until then a release states what it was tested on and lists the rest as `pending`.
 - **The Linux distro list** for `linux-x64`: at least one glibc 2.28 distro (a RHEL 8 rebuild)
